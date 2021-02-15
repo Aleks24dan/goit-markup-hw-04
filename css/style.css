@@ -11,6 +11,7 @@
   --color-logo: #2196f3;
   --color-link-contact: #757575;
   --footer-contacts: rgba(255, 255, 255, 0.6);
+  --advantages-thumb: #f5f4fa;
   --galery-item-gap: 30px;
   --gap50: 50px;
 }
@@ -55,7 +56,9 @@ h3 {
 ul {
   list-style: none;
 }
+
 /* modificators */
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -95,6 +98,7 @@ ul {
 .navigation-main a:focus {
   color: #2196f3;
 }
+
 .footer-address a:hover,
 .navigaton-list-item a:hover,
 .list-contact a:hover {
@@ -123,19 +127,45 @@ ul {
 
 .navigation-list {
   display: flex;
-  margin-right: 331px;
+  margin-right: 305px;
   justify-content: space-between;
 }
 .list-contact {
   display: flex;
 }
 .list-contact-item:first-child {
-  margin-right: 50px;
+  margin-right: 30px;
 }
+.list-contact-item {
+  align-content: center;
+}
+.list-contact-item a {
+  display: inline-flex;
+}
+.contact-icon-envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+.contact-icon-smartphone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.contact-icon-envelope:hover,
+.contact-icon-smartphone:hover {
+  fill: #2196f3;
+}
+
 /***************** hero *****************/
 
 .hero {
   background-color: var(--backgound-hero);
+  background-image: url(../img/background-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-container {
@@ -205,6 +235,21 @@ ul {
   flex-basis: calc(100% / 4 - var(--galery-item-gap));
 }
 
+.advantages-thumb {
+  background-color: var(--advantages-thumb);
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.advantages-icon {
+  width: 70px;
+  height: 70px;
+}
+
 .advantages-text {
   line-height: 24px;
   /* letter-spacing: 0.03em; */
@@ -232,6 +277,7 @@ ul {
 .about-item {
   flex-basis: calc(100% / 3 - var(--galery-item-gap));
 }
+
 /************************ our team ***********************/
 
 .team {
