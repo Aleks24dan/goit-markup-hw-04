@@ -65,7 +65,9 @@ ul {
   padding-right: 15px;
   margin: 0 auto;
 }
-
+.d-flex {
+  display: flex;
+}
 /************** navigation ******************/
 
 .header {
@@ -146,15 +148,17 @@ ul {
   width: 16px;
   height: 12px;
   margin-right: 10px;
+  fill: #757575;
 }
 .contact-icon-smartphone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
+  fill: #757575;
 }
 
-.contact-icon-envelope:hover,
-.contact-icon-smartphone:hover {
+.list-contact-item:hover .contact-icon-envelope,
+.list-contact-item:hover .contact-icon-smartphone {
   fill: #2196f3;
 }
 
@@ -327,6 +331,116 @@ ul {
 
 .team-item-text {
   font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.team-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-social-list > .team-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-social-icon {
+  fill: #757575;
+  width: 20px;
+  height: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.team-social-item a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+}
+
+.team-social-item a:hover .team-social-icon {
+  fill: #ffffff;
+}
+.team-social-item a:hover {
+  background-color: #2196f3;
+  border-radius: 50%;
+}
+
+/************************ brand****************************** */
+.brand {
+  background-color: #ffffff;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.brand-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--color-h);
+  margin-bottom: 50px;
+}
+
+.brand-list {
+  display: flex;
+  margin-left: calc(-1 * var(--galery-item-gap));
+  justify-content: center;
+}
+.brand-item {
+  margin-left: 30px;
+  flex-basis: calc(100% / 6 - var(--galery-item-gap));
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.brand-item:hover {
+  border: 1px solid #2196f3;
+}
+
+.brand-item:hover .brand-icon {
+  fill: #2196f3;
+}
+.brand-link {
+  display: flex;
+  min-height: 90px;
+  justify-content: center;
+  align-items: center;
+}
+.brand-icon {
+  fill: #afb1b8;
+}
+
+.brand-icon-first {
+  width: 44px;
+  height: 50px;
+}
+
+.brand-icon-taglin {
+  width: 40px;
+  height: 52px;
+}
+
+.brand-icon-company {
+  width: 41px;
+  height: 42px;
+}
+
+.brand-icon-foster {
+  width: 79px;
+  height: 42px;
+}
+
+.brand-icon-brand {
+  width: 59px;
+  height: 47px;
+}
+
+.brand-icon-last {
+  width: 88px;
+  height: 45px;
 }
 
 /*********************** footer ******************************/
@@ -358,6 +472,35 @@ footer {
 
 .footer-address a {
   color: var(--footer-contacts);
+}
+.footer-social-list {
+  display: flex;
+}
+.footer-wrap {
+  margin-right: 70px;
+}
+
+.footer-social-list .footer-social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.footer-social-list > .team-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-icon {
+  fill: #ffffff;
+}
+
+.social-tittle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 20px;
 }
 
 /********************************************************* portfolio-page******************************************************************/
@@ -455,4 +598,9 @@ footer {
   background-color: var(--backgound-navigation);
   border: 1px solid #eeeeee;
   flex-basis: calc(100% / 3 - var(--galery-item-gap));
+}
+
+.galery-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
