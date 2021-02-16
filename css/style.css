@@ -265,7 +265,9 @@ ul {
 }
 
 /************************ about **************************/
-
+.about {
+  padding-bottom: 94px;
+}
 .about-item > img {
   display: block;
   max-width: 100%;
